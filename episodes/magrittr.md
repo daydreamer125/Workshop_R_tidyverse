@@ -86,6 +86,22 @@ transform(kpl = mpg %>% multiply_by(0.4251))
 :::::::::::::::::::::::::::::::::
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+## Plotting
+
+- TODO: move to new epsiode, add epsidoe to config.yaml
+
+:::::: challenge
+
+Can you display an image
+
+:::solution
+![This is a cool plot. Adapted from https://alison.netlify.app/rls-plot-twist/]([https://magrittr.tidyverse.org/logo.png](https://raw.githubusercontent.com/daydreamer125/Workshop_R_tidyverse/main/episodes/bakeoff_viewers.png)){alt='ggplot plot.'}
+
+:::
+
+
+::::::
+
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
