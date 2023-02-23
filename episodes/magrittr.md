@@ -44,8 +44,43 @@ f(x)
 
 ## Output
  
-```output
+```r
 x %>% f
+```
+
+:::::::::::::::::::::::::::::::::
+
+::::::::::::::::::::::::::::::::::::: challenge 
+
+## Challenge 2: Can you do it?
+
+Can you rewrite the following with pipes to make it easier to read?
+```r
+carData <-
+ transform(
+ aggregate(
+ . ~ cyl,
+ data = subset(mtcars, hp > 100),
+ FUN = function(x) round(mean(x), 2)
+ ),
+ kpl = mpg*0.4251
+ )
+```
+
+:::::::::::::::::::::::: solution 
+
+## Output
+ 
+```r
+carData <-
+mtcars %>%
+subset(hp > 100) %>%
+aggregate(
+. ~ cyl,
+data = .,
+FUN = . %>% mean %>% round(2)
+) %>%
+transform(kpl = mpg %>% multiply_by(0.4251))
 ```
 
 :::::::::::::::::::::::::::::::::
