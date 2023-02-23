@@ -179,6 +179,18 @@
 </div>
 <!--/div.accordion-flush-->
 
+<div class="accordion accordion-flush" id="accordionFlush3">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading3">
+        <a href="magrittr.html">2. magrittr - Piping</a>
+    </div>
+<!--/div.accordion-header-->
+        
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
                 </div>
               </div>
             </div>
@@ -299,7 +311,7 @@ reinforce the objectives.</li>
   Instructor Note
   </h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
 <div class="accordion-body">
 <p>Inline instructor notes can help inform instructors of timing
 challenges associated with the lessons. They appear in the “Instructor
@@ -333,7 +345,7 @@ View”</p>
   Output
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -364,7 +376,7 @@ challenge blocks?<a class="anchor" aria-label="anchor" href="#challenge2"></a>
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>You can add a line with at least three colons and a
 <code>solution</code> tag.</p>
@@ -403,6 +415,115 @@ output</li>
 with your lesson</li>
 <li>Run <code>sandpaper::build_lesson()</code> to preview your lesson
 locally</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- 
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use. 
+ -->
+</section></section><section id="aio-magrittr"><p>Content from <a href="magrittr.html">magrittr - Piping</a></p>
+<hr>
+<p> Last updated on 2023-02-23 | 
+        
+        <a href="https://daydreamer125.github.io/Workshop_R_tidyverse/edit/main/episodes/magrittr.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p>Estimated time <i aria-hidden="true" data-feather="clock"></i> 12 minutes </p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right"> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>How do you use pipes in R with magrittr`?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>…</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section id="introduction"><h2 class="section-heading">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+</h2>
+<hr class="half-width">
+<figure><img src="https://magrittr.tidyverse.org/logo.png" alt="magrittr logo." class="figure mx-auto d-block"><figcaption>Magrittr Logo</figcaption></figure><p>Look at magrittr</p>
+<div id="accordionInstructor1" class="accordion instructor-note accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button instructor-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInstructor1" aria-expanded="false" aria-controls="collapseInstructor1">
+  <h3 class="accordion-header" id="headingInstructor1">
+  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div>
+  Instructor Note
+  </h3>
+</button>
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
+<div class="accordion-body">
+<p>Inline instructor notes can help inform instructors of timing
+challenges associated with the lessons. They appear in the “Instructor
+View”</p>
+</div>
+</div>
+</div>
+</div>
+<div id="challenge1" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="challenge-1-can-you-do-it" class="callout-inner">
+<h3 class="callout-title">Challenge 1: Can you do it?<a class="anchor" aria-label="anchor" href="#challenge1"></a>
+</h3>
+<div class="callout-content">
+<p>What is the equivalent of using pipes</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">f</span><span class="op">(</span><span class="va">x</span><span class="op">)</span></span></code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1">
+  Output
+  </h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div class="accordion-body">
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code><span><span class="va">x</span> <span class="op">%&gt;%</span> <span class="va">f</span></span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Keypoints<a class="anchor" aria-label="anchor" href="#keypoints1"></a>
+</h3>
+<div class="callout-content">
+<ul>
+<li>magrittr is cool</li>
 </ul>
 </div>
 </div>
