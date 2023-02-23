@@ -60,6 +60,7 @@ contact: '...'
 # Order of episodes in your lesson
 episodes: 
 - introduction.md
+- magrittr.md
 
 # Information for Learners
 learners: 
